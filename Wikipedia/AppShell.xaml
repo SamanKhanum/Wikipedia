@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wikipedia.AppShell" xmlns:views="clr-namespace:Wikipedia.Pages"
+       FlyoutBackgroundImage="flyoutbg" FlyoutBackgroundImageAspect="AspectFill" Shell.TitleColor="#719A5E" Shell.ForegroundColor="White"
+       Shell.TabBarBackgroundColor="White" Shell.BackgroundColor="#719A5E" Shell.TabBarUnselectedColor="LightGray" >
+
+
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <Label Text="Plants Wikipedia"
+                       HeightRequest="50"  TextColor="DarkSlateGray"
+                       FontAttributes="Bold" FontSize="20"
+                       HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,15,0,-10" />
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+    
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <!--<Tab>
+            <ShellContent Route="Cereals_Fruits_Nuts_VegetablesDetails"
+                          Title="Cereals, Fruits, Nuts And Vegetables"
+                          Icon="leaf"
+                          ContentTemplate="{DataTemplate Pages:Cereals_Fruits_Nuts_VegetablesPage}" />
+
+            <ShellContent Route="Conifers_OtherGymnospermsDetails"
+                          Title="Conifers And Other Gymnosperms"
+                          Icon="leaf"
+                          ContentTemplate="{DataTemplate Pages:Conifers_OtherGymnospermsPage}" />
+
+            <ShellContent Route="Ferns_OtherLowerVascularPlantsDetails"
+                      Title="Ferns And Other LowerVascular Plants"
+                      Icon="leaf"
+                      ContentTemplate="{DataTemplate Pages:Ferns_OtherLowerVascularPlantsPage}" />
+
+            <ShellContent Route="FloweringPlantsDetails"
+                      Title="Flowering Plants"
+                      Icon="leaf"
+                      ContentTemplate="{DataTemplate Pages:FloweringPlantsPage}" />
+
+            <ShellContent Route="NonvascularPlantsDetails"
+                      Title="Non-Vascular Plants"
+                      Icon="leaf"
+                      ContentTemplate="{DataTemplate Pages:NonvascularPlantsPage}" />
+        </Tab>-->
+
+        <ShellContent Route="Cereals_Fruits_Nuts_VegetablesDetails"
+                          Title="Cereals, Fruits, Nuts And Vegetables"
+                          Icon="leaf"
+                          ContentTemplate="{DataTemplate views:Cereals_Fruits_Nuts_VegetablesPage}"/>
+        
+        <ShellContent Route="Conifers_OtherGymnospermsDetails"
+                          Title="Conifers And Other Gymnosperms"
+                          Icon="leaf"
+                          ContentTemplate="{DataTemplate views:Conifers_OtherGymnospermsPage}" />
+
+        <ShellContent Route="Ferns_OtherLowerVascularPlantsDetails"
+                      Title="Ferns And Other LowerVascular Plants"
+                      Icon="leaf"
+                      ContentTemplate="{DataTemplate views:Ferns_OtherLowerVascularPlantsPage}" />
+
+        <ShellContent Route="FloweringPlantsDetails"
+                      Title="Flowering Plants"
+                      Icon="leaf"
+                      ContentTemplate="{DataTemplate views:FloweringPlantsPage}" />
+
+        <ShellContent Route="NonvascularPlantsDetails"
+                      Title="Non-Vascular Plants "
+                      Icon="leaf"
+                      ContentTemplate="{DataTemplate views:NonvascularPlantsPage}" />
+    </FlyoutItem>
+
+
+    <!--<TabBar>
+        <Tab>
+            <ShellContent Route="Cereals_Fruits_Nuts_VegetablesDetails"
+                          Icon="leaf"
+                          ContentTemplate="{DataTemplate views:Cereals_Fruits_Nuts_VegetablesPage}" />
+
+            <ShellContent Route="Conifers_OtherGymnospermsDetails"
+                          Icon="leaf"
+                          ContentTemplate="{DataTemplate views:Conifers_OtherGymnospermsPage}" />
+
+            <ShellContent Route="Ferns_OtherLowerVascularPlantsDetails"
+                      Icon="PlantIcon"
+                      ContentTemplate="{DataTemplate views:Ferns_OtherLowerVascularPlantsPage}" />
+
+            <ShellContent Route="FloweringPlantsDetails"
+                      Icon="PlantIcon"
+                      ContentTemplate="{DataTemplate views:FloweringPlantsPage}" />
+
+            <ShellContent Route="NonvascularPlantsDetails"
+                      Icon="PlantIcon"
+                      ContentTemplate="{DataTemplate views:NonvascularPlantsPage}" />
+        </Tab>
+       
+    </TabBar>-->
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <Label Text="To Plant A Garden Is To Believe In Tomorrow!!"
+                       HeightRequest="100"  TextColor="Gray"
+                       FontAttributes="Bold" FontSize="20" CharacterSpacing="2" LineHeight="1.2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10"  Margin="0,10" Opacity="0.7"  />
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+</Shell>

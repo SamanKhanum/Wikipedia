@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:Wikipedia.Controls"
+             x:Class="Wikipedia.Pages.FloweringPlantsPage" 
+             xmlns:Data="clr-namespace:Wikipedia.Data" xmlns:Detail="clr-namespace:Wikipedia.Pages.DetailPages">
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" 
+                                        Value="#D3EBE9" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <Shell.SearchHandler>
+        <Controls:PlantsSearchHandler Placeholder="Search . . ."
+                                      ShowsResults="true"
+                                      ItemTemplate="{StaticResource PlantSearchTemplate}"
+                                      Plants="{x:Static Data:FloweringPlantsData.flower}"
+                                      SelectedItemNavigationTarget="{x:Type Detail:FloweringPlantsDetails}" />
+    </Shell.SearchHandler>
+
+    <CollectionView Margin="20"
+                    ItemsSource="{x:Static Data:FloweringPlantsData.flower}"
+                    ItemTemplate="{StaticResource PlantTemplate}"
+                    SelectionMode="Single"
+                    SelectionChanged="OnCollectionViewSelectionChanged" />
+</ContentPage>
